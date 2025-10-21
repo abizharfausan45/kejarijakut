@@ -25,9 +25,9 @@
     }
 
     header img {
-      height: 180px;
+      height: 140px;
       position: absolute;
-      top: 40px;
+      top: 20px;
     }
 
     .logo-left {
@@ -36,7 +36,7 @@
 
     .logo-right {
       right: 25px;
-      
+      transform: scaleX(-1); /* mirror kanan */
     }
 
     header h1 {
@@ -46,6 +46,31 @@
       color: #FFD600;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       letter-spacing: 1px;
+      max-width: 80%;
+    }
+
+    /* 🔹 Untuk layar kecil (HP) */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+      }
+
+      header img {
+        position: static;
+        height: 90px;
+        margin: 5px 0;
+      }
+
+      header h1 {
+        font-size: 20px;
+        max-width: 100%;
+      }
+
+      .logo-right {
+        transform: scaleX(-1);
+      }
     }
 
     .search-container {
