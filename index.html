@@ -18,58 +18,50 @@
       color: white;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 20px;
-      position: relative;
+      justify-content: space-between;
+      padding: 10px 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: relative;
+      flex-wrap: wrap;
     }
 
     header img {
-      height: 140px;
-      position: absolute;
-      top: 20px;
+      height: 120px;
+      max-width: 100%;
     }
 
     .logo-left {
-      left: 25px;
+      transform: none;
     }
 
     .logo-right {
-      right: 25px;
-      transform: scaleX(-1); /* mirror kanan */
+      transform: scaleX(-1);
     }
 
     header h1 {
-      margin: 0;
+      flex: 1;
       text-align: center;
       font-size: 26px;
       color: #FFD600;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       letter-spacing: 1px;
-      max-width: 80%;
+      margin: 0 10px;
     }
 
-    /* 🔹 Untuk layar kecil (HP) */
+    /* 🔹 Responsif untuk layar kecil (HP) */
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        text-align: center;
         padding: 10px;
       }
 
       header img {
-        position: static;
-        height: 90px;
-        margin: 5px 0;
+        height: 70px;
       }
 
       header h1 {
-        font-size: 20px;
-        max-width: 100%;
-      }
-
-      .logo-right {
-        transform: scaleX(-1);
+        font-size: 18px;
+        line-height: 1.2;
+        margin: 0 5px;
       }
     }
 
